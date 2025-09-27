@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinkerhub MEC Logo Animation</title>
+    <link rel="stylesheet" href="logo-animation.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-assembly">
+            <!-- Top row -->
+            <div class="piece piece-1 teal-piece"></div>
+            <div class="piece piece-2 blue-piece"></div>
+
+            <!-- Middle row -->
+            <div class="piece piece-3 yellow-piece"></div>
+
+            <!-- Bottom row -->
+            <div class="piece piece-4 red-piece"></div>
+            <div class="piece piece-5 green-piece"></div>
+            <div class="piece piece-6 dark-teal-piece"></div>
+
+            <!-- Title that appears from inside logo -->
+            <div class="title-container">
+                <h1 class="main-title">
+                    <span class="letter" data-delay="0">T</span>
+                    <span class="letter" data-delay="0.1">I</span>
+                    <span class="letter" data-delay="0.2">N</span>
+                    <span class="letter" data-delay="0.3">K</span>
+                    <span class="letter" data-delay="0.4">E</span>
+                    <span class="letter" data-delay="0.5">R</span>
+                    <span class="letter" data-delay="0.6">H</span>
+                    <span class="letter" data-delay="0.7">U</span>
+                    <span class="letter" data-delay="0.8">B</span>
+                    <span class="letter word-gap" data-delay="0.9">&nbsp;</span>
+                    <span class="letter" data-delay="1">M</span>
+                    <span class="letter" data-delay="1.1">E</span>
+                    <span class="letter" data-delay="1.2">C</span>
+                </h1>
+            </div>
+        </div>
+
+        <!-- New vertical title container -->
+        <div class="vertical-title-container">
+            <!-- Left side decorative elements -->
+            <div class="left-decorations">
+                <div class="floating-particle particle-1"></div>
+                <div class="floating-particle particle-2"></div>
+                <div class="floating-particle particle-3"></div>
+                <div class="geometric-shape shape-1"></div>
+                <div class="geometric-shape shape-2"></div>
+            </div>
+
+            <div class="vertical-box"></div>
+            <div class="vertical-title">
+                <div class="vertical-word tink-word">
+                    <span class="vertical-letter" data-delay="0">T</span>
+                    <span class="vertical-letter" data-delay="0.1">I</span>
+                    <span class="vertical-letter" data-delay="0.2">N</span>
+                    <span class="vertical-letter" data-delay="0.3">K</span>
+                </div>
+                <div class="vertical-word hack-word">
+                    <span class="vertical-letter" data-delay="0.5">H</span>
+                    <span class="vertical-letter" data-delay="0.6">A</span>
+                    <span class="vertical-letter" data-delay="0.7">C</span>
+                    <span class="vertical-letter" data-delay="0.8">K</span>
+                </div>
+            </div>
+
+            <!-- Right side decorative elements -->
+            <div class="right-decorations">
+                <div class="floating-particle particle-4"></div>
+                <div class="floating-particle particle-5"></div>
+                <div class="floating-particle particle-6"></div>
+                <div class="geometric-shape shape-3"></div>
+                <div class="geometric-shape shape-4"></div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <span>▼</span>
+                <span>SCROLL</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrollable content section -->
+    <div class="scroll-content">
+        <!-- ABOUT Section -->
+        <div class="about-section">
+            <div class="about-title">
+                <span class="title-text">ABOUT</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-box">
+                <p>TinkerHub MEC's overnight Hackathon, Kerala's inaugural AI-based event, promotes student expertise and explores Generative AI. This innovative platform unites technology and innovation, fostering diverse solutions in various fields.</p>
+            </div>
+        </div>
+
+        <!-- TINK HACK Section -->
+        <div class="tinkhack-section">
+            <div class="tinkhack-title">
+                <span class="title-text">TINK HACK</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="tinkhack-box">
+                <p>Tinkerhub MEC, the Model Engineering College chapter of Tinkerhub, is a dynamic community fostering innovation and tech upskilling. The chapter hosts interactive sessions, hackathons, and workshops like Tinktank, GetSetWeb, and TinkHerHack to equip students with hands-on skills and industry insights. With our initiatives, we champion inclusivity and collaborative learning, inspiring students to explore and elevate their careers.</p>
+            </div>
+        </div>
+
+        <!-- TIMELINE Section -->
+        <div class="timeline-section">
+            <div class="timeline-title">
+                <span class="title-text">TIMELINE</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-bar">
+                    <div class="timeline-hole" data-index="1"></div>
+                    <div class="timeline-hole" data-index="2"></div>
+                    <div class="timeline-hole" data-index="3"></div>
+                    <div class="timeline-hole" data-index="4"></div>
+                </div>
+                <div class="timeline-boxes">
+                    <div class="timeline-box">
+                        <p>Date to be updated</p>
+                    </div>
+                    <div class="timeline-box">
+                        <p>Date to be updated</p>
+                    </div>
+                    <div class="timeline-box">
+                        <p>Date to be updated</p>
+                    </div>
+                    <div class="timeline-box">
+                        <p>Date to be updated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGISTRATION Section -->
+        <div class="registration-section">
+            <div class="registration-title">
+                <span class="title-text">REGISTRATION</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="registration-box">
+                <p>Form has not being released</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let scrollingEnabled = false;
+
+        // Disable scrolling initially
+        function disableScrolling() {
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Enable scrolling after TINK HACK animation
+        function enableScrolling() {
+            document.body.style.overflow = 'auto';
+            scrollingEnabled = true;
+        }
+
+        // Simple scroll visibility system
+        function handleScrollAnimations() {
+            if (!scrollingEnabled) return;
+
+            const sections = document.querySelectorAll('.about-section, .tinkhack-section, .timeline-section, .registration-section');
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (isVisible) {
+                    if (!section.classList.contains('visible')) {
+                        section.classList.add('visible');
+                        section.classList.remove('hidden');
+
+                        // Trigger title animations on first appearance
+                        if (!section.hasAttribute('data-animated')) {
+                            section.classList.add('animate');
+                            section.setAttribute('data-animated', 'true');
+                        }
+                    }
+                } else {
+                    section.classList.add('hidden');
+                    section.classList.remove('visible');
+                }
+            });
+        }
+
+        // Smooth scroll functionality for scroll indicator
+        function setupScrollIndicator() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', () => {
+                    if (scrollingEnabled) {
+                        window.scrollTo({
+                            top: window.innerHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        }
+
+        // Initialize everything when page loads
+        window.addEventListener('load', () => {
+            disableScrolling();
+            setupScrollIndicator();
+
+            // Enable scrolling after TINK HACK animation completes (around 15 seconds)
+            setTimeout(() => {
+                enableScrolling();
+                handleScrollAnimations();
+            }, 15000);
+        });
+
+        // Handle scroll events (only when scrolling is enabled)
+        window.addEventListener('scroll', handleScrollAnimations);
+    </script>
+</body>
+</html>
